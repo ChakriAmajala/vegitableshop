@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Jenkins credentials ID
+        IMAGE_NAME = "chakriamajaladocker/vegitableshop"
+        PORT = "8082"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build -t ${IMAGE_NAME}:${env.BUILD_NUMBER} ."
+                }
+            }
+        }
+
+        stage('Login to DockerHub') {
+            steps {
+                script {
+                    sh "echo ${DOCKERHUB_CREDENTIALS_PSW} | docker login -u ${DOCKERHUB_CREDENTIALS_USR} --password-stdin"
+                }
+            }
+        }
+
+        stage('Push Image to DockerHub') {
+            steps {
+                script {
+                    sh "docker push ${IMAGE_NAME}:${env.BUILD_NUMBER}"
+                }
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                script {
+                    // Stop old container if running
+                    sh "docker rm -f vegapp || true"
+                    // Run new container on PORT 8082
+                    sh "docker run -d -p ${PORT}:80 --name vegapp ${IMAGE_NAME}:${env.BUILD_NUMBER}"
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Deployed successfully! Access app at: http://<server-ip>:${PORT}"
+        }
+        failure {
+            echo "❌ Build or deployment failed."
+        }
+    }
+}
+
