@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshVeg | Products</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshVeg | Products</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f8f9fa;color:#333;}
+header{background:#28a745;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;}
+header h1{font-size:24px;}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+section{padding:40px 20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+.card{background:#fff;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.card img{max-width:100%;border-radius:10px;}
+.card h3{margin-top:10px;font-size:18px;}
+.card p{color:#28a745;font-weight:bold;}
+footer{background:#343a40;color:#fff;text-align:center;padding:20px;}
+</style>
 </head>
 <body>
-    <header>
-        <h1>FreshVeg</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="products">
-        <h2>Our Vegetables</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582515073490-dc64d16e4e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Carrot">
-                <h3>Carrot</h3>
-                <p>₹40/kg</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Tomato">
-                <h3>Tomato</h3>
-                <p>₹30/kg</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582515072470-3f97d37e7c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Potato">
-                <h3>Potato</h3>
-                <p>₹25/kg</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582515074046-6c0c4f1cd046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Onion">
-                <h3>Onion</h3>
-                <p>₹35/kg</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1617196034236-2d091bbf9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Spinach">
-                <h3>Spinach</h3>
-                <p>₹20/kg</p>
-            </div>
-        </div>
-    </section>
+<header>
+<h1>FreshVeg</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
 
-    <footer>
-        <p>&copy; 2025 FreshVeg. All rights reserved.</p>
-    </footer>
+<section class="products">
+<h2>Our Vegetables</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1582515073490-dc64d16e4e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Carrot"><h3>Carrot</h3><p>₹40/kg</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Tomato"><h3>Tomato</h3><p>₹30/kg</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1582515072470-3f97d37e7c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Potato"><h3>Potato</h3><p>₹25/kg</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1582515074046-6c0c4f1cd046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Onion"><h3>Onion</h3><p>₹35/kg</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1617196034236-2d091bbf9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Spinach"><h3>Spinach</h3><p>₹20/kg</p></div>
+</div>
+</section>
 
-    <script src="js/script.js"></script>
+<footer>
+<p>&copy; 2025 FreshVeg. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
