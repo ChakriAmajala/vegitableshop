@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshVeg | Contact</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshVeg | Contact</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f8f9fa;color:#333;}
+header{background:#28a745;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;}
+header h1{font-size:24px;}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+.contact form{max-width:500px;margin:40px auto;display:flex;flex-direction:column;}
+.contact input,.contact textarea,.contact button{padding:10px;margin-bottom:15px;border-radius:5px;border:1px solid #ccc;}
+.contact button{background:#28a745;color:#fff;border:none;cursor:pointer;font-weight:bold;}
+.contact button:hover{background:#218838;}
+footer{background:#343a40;color:#fff;text-align:center;padding:20px;}
+</style>
 </head>
 <body>
-    <header>
-        <h1>FreshVeg</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<header>
+<h1>FreshVeg</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
 
-    <footer>
-        <p>&copy; 2025 FreshVeg. All rights reserved.</p>
-    </footer>
+<section class="contact">
+<h2>Contact Us</h2>
+<form id="contactForm">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
 
-    <script src="js/script.js"></script>
+<footer>
+<p>&copy; 2025 FreshVeg. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+e.preventDefault();
+alert('Thank you! Your message has been sent.');
+this.reset();
+});
+</script>
+
 </body>
 </html>
