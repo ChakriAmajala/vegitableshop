@@ -1,15 +1,11 @@
-# Use lightweight Nginx image
+# Use Nginx image
 FROM nginx:alpine
 
-# Remove default static files
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy your project (HTML, CSS, JS, images)
+# Copy your static site files (HTML, CSS, JS, images) to nginx folder
 COPY . /usr/share/nginx/html
 
-# Expose port 80 inside container
+# Expose port 80
 EXPOSE 80
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
-
