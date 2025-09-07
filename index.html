@@ -132,82 +132,50 @@
   </aside>
 
   <script>
-    // --- Data ---
     const PRODUCTS = [
-      { id: 'tomato', name: 'Tomato', price: 28, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?tomato,vegetables' },
-      { id: 'potato', name: 'Potato', price: 32, unit: 'per kg', cat: 'root', img: 'https://source.unsplash.com/600x400/?potato' },
-      { id: 'onion', name: 'Onion', price: 40, unit: 'per kg', cat: 'allium', img: 'https://source.unsplash.com/600x400/?onion' },
-      { id: 'carrot', name: 'Carrot', price: 48, unit: 'per kg', cat: 'root', img: 'https://source.unsplash.com/600x400/?carrot' },
-      { id: 'cucumber', name: 'Cucumber', price: 36, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?cucumber' },
-      { id: 'brinjal', name: 'Brinjal (Eggplant)', price: 55, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?eggplant' },
-      { id: 'okra', name: 'Ladyfinger (Okra)', price: 52, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?okra' },
-      { id: 'cabbage', name: 'Cabbage', price: 30, unit: 'per kg', cat: 'leafy', img: 'https://source.unsplash.com/600x400/?cabbage' },
-      { id: 'cauliflower', name: 'Cauliflower', price: 58, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?cauliflower' },
-      { id: 'spinach', name: 'Spinach (Palak)', price: 20, unit: 'per bunch', cat: 'leafy', img: 'https://source.unsplash.com/600x400/?spinach' },
-      { id: 'coriander', name: 'Coriander (Dhaniya)', price: 12, unit: 'per bunch', cat: 'leafy', img: 'https://source.unsplash.com/600x400/?coriander' },
-      { id: 'greenchilli', name: 'Green Chillies', price: 70, unit: 'per 250g', cat: 'other', img: 'https://source.unsplash.com/600x400/?green-chilli' },
-      { id: 'capsicum', name: 'Capsicum', price: 80, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?capsicum' },
-      { id: 'beetroot', name: 'Beetroot', price: 45, unit: 'per kg', cat: 'root', img: 'https://source.unsplash.com/600x400/?beetroot' },
-      { id: 'pumpkin', name: 'Pumpkin', price: 34, unit: 'per kg', cat: 'gourd', img: 'https://source.unsplash.com/600x400/?pumpkin' },
-      { id: 'bittergourd', name: 'Bitter Gourd (Karela)', price: 68, unit: 'per kg', cat: 'gourd', img: 'https://source.unsplash.com/600x400/?bitter-gourd' },
-      { id: 'bottlegourd', name: 'Bottle Gourd (Lauki)', price: 38, unit: 'per kg', cat: 'gourd', img: 'https://source.unsplash.com/600x400/?bottle-gourd' },
-      { id: 'drumstick', name: 'Drumstick (Moringa)', price: 90, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?drumstick,vegetable' },
-      { id: 'radish', name: 'Radish (Mooli)', price: 42, unit: 'per kg', cat: 'root', img: 'https://source.unsplash.com/600x400/?radish' },
-      { id: 'sweetcorn', name: 'Sweet Corn', price: 25, unit: 'per piece', cat: 'other', img: 'https://source.unsplash.com/600x400/?sweet-corn' },
-      { id: 'garlic', name: 'Garlic', price: 160, unit: 'per kg', cat: 'allium', img: 'https://source.unsplash.com/600x400/?garlic' },
-      { id: 'ginger', name: 'Ginger', price: 140, unit: 'per kg', cat: 'root', img: 'https://source.unsplash.com/600x400/?ginger' },
-      { id: 'peas', name: 'Green Peas', price: 120, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?green-peas' },
-      { id: 'beans', name: 'French Beans', price: 95, unit: 'per kg', cat: 'other', img: 'https://source.unsplash.com/600x400/?french-beans' },
+      { id: 'tomato', name: 'Tomato', price: 28, unit: 'per kg', cat: 'other', img: 'https://images.unsplash.com/photo-1607305387298-efd8e0b7a1b7' },
+      { id: 'potato', name: 'Potato', price: 32, unit: 'per kg', cat: 'root', img: 'https://images.unsplash.com/photo-1582515073490-dc0c5d8b93c7' },
+      { id: 'onion', name: 'Onion', price: 40, unit: 'per kg', cat: 'allium', img: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2' },
+      { id: 'carrot', name: 'Carrot', price: 48, unit: 'per kg', cat: 'root', img: 'https://images.unsplash.com/photo-1615485737457-5f6a8b4e8a1f' },
+      { id: 'cucumber', name: 'Cucumber', price: 36, unit: 'per kg', cat: 'other', img: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce' },
+      { id: 'cabbage', name: 'Cabbage', price: 30, unit: 'per kg', cat: 'leafy', img: 'https://images.unsplash.com/photo-1506801310323-534be5e7a87e' },
+      { id: 'capsicum', name: 'Capsicum', price: 80, unit: 'per kg', cat: 'other', img: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60' },
+      { id: 'garlic', name: 'Garlic', price: 160, unit: 'per kg', cat: 'allium', img: 'https://images.unsplash.com/photo-1617196034794-2ffb5f3e6aea' },
+      { id: 'ginger', name: 'Ginger', price: 140, unit: 'per kg', cat: 'root', img: 'https://images.unsplash.com/photo-1623189488072-5e5a2f61bdead' },
+      { id: 'spinach', name: 'Spinach', price: 20, unit: 'per bunch', cat: 'leafy', img: 'https://images.unsplash.com/photo-1615485737457-5f6a8b4e8a1f' }
     ];
 
-    // --- State ---
-    let cart = JSON.parse(localStorage.getItem('freshveg_cart') || '{}'); // {id: qty}
-
-    // --- Helpers ---
+    let cart = JSON.parse(localStorage.getItem('freshveg_cart') || '{}');
     const fmt = (n) => `₹${n.toLocaleString('en-IN')}`;
     const getProduct = (id) => PRODUCTS.find(p => p.id === id);
-
-    function computeSubtotal() {
-      return Object.entries(cart).reduce((sum, [id, qty]) => sum + getProduct(id).price * qty, 0);
-    }
-
-    function saveCart() {
-      localStorage.setItem('freshveg_cart', JSON.stringify(cart));
-      updateCartUI();
-    }
-
-    // --- Render Products ---
     const grid = document.getElementById('grid');
     const searchEl = document.getElementById('search');
     const categoryEl = document.getElementById('category');
     const sortEl = document.getElementById('sort');
 
+    function computeSubtotal() {
+      return Object.entries(cart).reduce((sum, [id, qty]) => sum + getProduct(id).price * qty, 0);
+    }
+    function saveCart() { localStorage.setItem('freshveg_cart', JSON.stringify(cart)); updateCartUI(); }
+
     function productCard(p) {
       const qty = cart[p.id] || 0;
       return `
         <article class="card" data-name="${p.name.toLowerCase()}" data-cat="${p.cat}" data-price="${p.price}" data-id="${p.id}">
-          <div class="imgwrap"><img loading="lazy" alt="${p.name}" src="${p.img}" onerror="this.src='https://source.unsplash.com/600x400/?vegetables'" /></div>
+          <div class="imgwrap"><img alt="${p.name}" src="${p.img}" /></div>
           <div class="content">
             <div class="title">${p.name}</div>
             <div class="subtle">${p.unit}</div>
             <div class="price">${fmt(p.price)}</div>
             <div class="actions">
-              <div class="qty" role="group" aria-label="Quantity selector">
-                <button data-action="dec" aria-label="Decrease">−</button>
-                <span>${qty}</span>
-                <button data-action="inc" aria-label="Increase">+</button>
-              </div>
+              <div class="qty"><button data-action="dec">−</button><span>${qty}</span><button data-action="inc">+</button></div>
               <button class="add" data-action="add">Add</button>
             </div>
           </div>
         </article>`;
     }
+    function renderProducts() { grid.innerHTML = PRODUCTS.map(productCard).join(''); }
 
-    function renderProducts() {
-      grid.innerHTML = PRODUCTS.map(productCard).join('');
-    }
-
-    // --- Filtering & Sorting ---
     function applyFilters() {
       const q = searchEl.value.trim().toLowerCase();
       const cat = categoryEl.value;
@@ -218,19 +186,8 @@
         const show = (cat === 'all' || c === cat) && (q === '' || name.includes(q));
         card.style.display = show ? '' : 'none';
       });
-      // sort visible
-      const sort = sortEl.value;
-      const visible = cards.filter(c=>c.style.display !== 'none');
-      visible.sort((a,b)=>{
-        if (sort === 'price-asc') return +a.dataset.price - +b.dataset.price;
-        if (sort === 'price-desc') return +b.dataset.price - +a.dataset.price;
-        if (sort === 'name-asc') return a.dataset.name.localeCompare(b.dataset.name);
-        return 0; // featured
-      });
-      visible.forEach(c=>grid.appendChild(c));
     }
 
-    // --- Cart UI ---
     const cartCount = document.getElementById('cartCount');
     const cartList = document.getElementById('cartList');
     const subtotalEl = document.getElementById('subtotal');
@@ -244,70 +201,14 @@
         const p = getProduct(id);
         return `
           <div class="cartrow" data-id="${id}">
-            <img alt="${p.name}" src="${p.img}" onerror="this.src='https://source.unsplash.com/100x100/?vegetables'" />
+            <img alt="${p.name}" src="${p.img}" />
             <div>
               <div class="strong">${p.name}</div>
-              <div class="meta">${qty} × ${fmt(p.price)} <span class="strong">= ${fmt(qty * p.price)}</span></div>
+              <div class="meta">${qty} × ${fmt(p.price)} = <span class="strong">${fmt(qty * p.price)}</span></div>
             </div>
             <button class="rm" data-action="remove">Remove</button>
           </div>`;
       }).join('');
       const sub = computeSubtotal();
-      subtotalEl.textContent = fmt(sub);
-      const delivery = sub === 0 ? 0 : 30;
-      deliveryEl.textContent = fmt(delivery);
-      totalEl.textContent = fmt(sub + delivery);
-    }
-
-    // --- Event Handlers ---
-    grid.addEventListener('click', (e) => {
-      const btn = e.target.closest('button');
-      if (!btn) return;
-      const card = e.target.closest('.card');
-      const id = card.dataset.id;
-      const qtySpan = card.querySelector('.qty span');
-      if (btn.dataset.action === 'inc') {
-        qtySpan.textContent = (+qtySpan.textContent + 1);
-      } else if (btn.dataset.action === 'dec') {
-        qtySpan.textContent = Math.max(0, +qtySpan.textContent - 1);
-      } else if (btn.dataset.action === 'add') {
-        const q = +qtySpan.textContent || 1; // add at least 1
-        cart[id] = (cart[id] || 0) + q;
-        qtySpan.textContent = 0;
-        saveCart();
-      }
-    });
-
-    document.getElementById('cartList').addEventListener('click', (e) => {
-      const btn = e.target.closest('button[data-action="remove"]');
-      if (!btn) return;
-      const row = e.target.closest('.cartrow');
-      const id = row.dataset.id;
-      delete cart[id];
-      saveCart();
-    });
-
-    document.getElementById('checkoutBtn').addEventListener('click', () => {
-      const sub = computeSubtotal();
-      if (sub === 0) { alert('Your cart is empty! Add items before checkout.'); return; }
-      const total = sub + 30;
-      alert(`Order placed!\nSubtotal: ${fmt(sub)}\nDelivery: ₹30\nTotal: ${fmt(total)}\n\n(Stub) Integrate payment gateway later.`);
-      cart = {}; saveCart();
-    });
-
-    document.getElementById('clearFilters').addEventListener('click', () => {
-      searchEl.value = ''; categoryEl.value = 'all'; sortEl.value = 'featured'; applyFilters();
-    });
-
-    searchEl.addEventListener('input', applyFilters);
-    categoryEl.addEventListener('change', applyFilters);
-    sortEl.addEventListener('change', applyFilters);
-
-    // --- Init ---
-    renderProducts();
-    applyFilters();
-    updateCartUI();
-  </script>
-</body>
-</html>
+      subtotalEl.textCont
 
