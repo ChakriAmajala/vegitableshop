@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshVeg | Home</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshVeg | Home</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f8f9fa;color:#333;}
+header{background:#28a745;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;}
+header h1{font-size:24px;}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+.hero{text-align:center;padding:60px 20px;background:url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200') center/cover no-repeat;color:#fff;}
+.hero h2{font-size:48px;margin-bottom:10px;}
+.hero p{font-size:20px;margin-bottom:20px;}
+.btn{background:#ffc107;padding:10px 20px;color:#333;text-decoration:none;border-radius:5px;font-weight:bold;}
+.btn:hover{background:#e0a800;}
+section{padding:40px 20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+.card{background:#fff;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.card img{max-width:100%;border-radius:10px;}
+.card h3{margin-top:10px;font-size:18px;}
+.card p{color:#28a745;font-weight:bold;}
+footer{background:#343a40;color:#fff;text-align:center;padding:20px;}
+</style>
 </head>
 <body>
-    <header>
-        <h1>FreshVeg</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h2>Welcome to FreshVeg</h2>
-        <p>Fresh vegetables delivered to your doorstep every day!</p>
-        <a href="products.html" class="btn">Shop Now</a>
-    </section>
+<header>
+<h1>FreshVeg</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
 
-    <section class="featured">
-        <h2>Featured Vegetables</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582515073490-dc64d16e4e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2Fycm90fHx8fHwxNjk1MDUxMjM4&ixlib=rb-4.0.3&q=80&w=200" alt="Carrot">
-                <h3>Carrot</h3>
-                <p>₹40/kg</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Tomato">
-                <h3>Tomato</h3>
-                <p>₹30/kg</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582515072470-3f97d37e7c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Potato">
-                <h3>Potato</h3>
-                <p>₹25/kg</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+<h2>Welcome to FreshVeg</h2>
+<p>Fresh vegetables delivered to your doorstep every day!</p>
+<a href="products.html" class="btn">Shop Now</a>
+</section>
 
-    <footer>
-        <p>&copy; 2025 FreshVeg. All rights reserved.</p>
-    </footer>
+<section class="featured">
+<h2>Featured Vegetables</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1582515073490-dc64d16e4e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Carrot"><h3>Carrot</h3><p>₹40/kg</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Tomato"><h3>Tomato</h3><p>₹30/kg</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1582515072470-3f97d37e7c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="Potato"><h3>Potato</h3><p>₹25/kg</p></div>
+</div>
+</section>
 
-    <script src="js/script.js"></script>
+<footer>
+<p>&copy; 2025 FreshVeg. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
-
-
